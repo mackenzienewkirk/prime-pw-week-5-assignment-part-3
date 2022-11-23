@@ -43,7 +43,7 @@ console.log(albumSix);
 
 function addToCollection(title, artist, yearPublished){
     collection.push(albumOne);
-return albumOne;
+return collection;
 }
 
 console.log(collection);
@@ -53,5 +53,5 @@ function showCollection(){
 }
 
 function findByArtist(){
-    
+
 }
