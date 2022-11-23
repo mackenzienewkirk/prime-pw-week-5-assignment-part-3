@@ -51,3 +51,7 @@ console.log(collection);
 function showCollection(){
 
 }
+
+function findByArtist(){
+    
+}
