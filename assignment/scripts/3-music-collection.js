@@ -33,25 +33,39 @@ let albumSix = {
     yearPublished: 1975
 }
 
-console.log(albumOne);
-console.log(albumTwo);
-console.log(albumThree);
-console.log(albumFour);
-console.log(albumFive);
-console.log(albumSix);
 
-
-function addToCollection(title, artist, yearPublished){
-    collection.push(albumOne);
-return collection;
+function addToCollection(title, artist, yearPublished) {
+let album = {
+    albumTitle: title,
+    albumArtist: artist,
+    albumYear: yearPublished,
 }
-
-console.log(collection);
-
-function showCollection(){
-
+    collection.push(album);
+return album;
 }
+console.log('Add Love and Hate by Michael Kiwanuka to collection:', addToCollection('Love and Hate', 'Michael Kiwanuka', 2016) );
+console.log('Add Coloring Book by Chance The Rapper to the collection:')
 
-function findByArtist(){
+function showCollection(array){
+    console.log(('These are my albums:'), array.length);
+for (let i=0; i < array.length; i++); {
+    console.log(`${array[i].albumTitle} by ${array[i].albumArtist}, published in ${array[i].albumYear}`);
 
 }
+}
+
+function findByArtist(artist){
+    let found = [];
+    for (let i = 0; i < collection.length; i++) {
+        if (collection[i].albumArtist === artist) {
+            found.push(collection[i]); 
+        } else 
+    }
+    return found;
+}
+
+//Test 'findByArtist' function.
+
+console.log('Should find Michael Kiwanuka album:', findByArtist('Michael Kiwanuka'));
+console.log('Should return an empty array:', findByArtist('Pitbul'));
+
