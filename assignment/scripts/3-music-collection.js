@@ -1,6 +1,6 @@
 console.log('***** Music Collection *****')
 
-let collection = {};
+let collection = [];
 
 function addToCollection(title, artist, yearPublished) {
 let album = {
@@ -18,11 +18,15 @@ console.log('Add Renaissance by Beyonce to the collection:', addToCollection('Re
 console.log('Add I Just Dropped By To Say Hello by Johnny Hartman to the collection:', addToCollection('I Just Dropped By To Say Hello', 'Johnny Hartman', 1963));
 console.log('Add Blood On The Tracks by Bob Dylan to the collection:', addToCollection('Blood On The Tracks', 'Bob Dylan', 1975));
 
+//Checking to see entire collection.
+
+console.log(collection);
+
 function showCollection(array){
     console.log(('These are my albums:'), array.length);
 for (let i=0; i < array.length; i++); {
     console.log(`${array[i].albumTitle} by ${array[i].albumArtist}, published in ${array[i].albumYear}`);
-
+return "What do you think of my collection?";
 }
 }
 
